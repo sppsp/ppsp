@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>table tag</title>
+    </head>
+    <body>
+        <style>
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                border: 1px solid black;
+                padding: 12px;
+            }
+            .col1 {
+                width: 80px;
+            }
+            .col2 {
+                background-color: yellow;
+            }
+        </style>
+
+        <h1>table 기본</h1>
+        <table>
+            <!-- 캡션 태그는 테이블의 제목 -->
+            <caption>
+                프로필 태이블
+            </caption>
+            <!-- tr은 ㅡ 행태그, td는 l 열태그, th는 표의 제목 열의 태그 -->
+            <!-- tr 태그 안에 tr > th, th 태그가 반드시 있어야 한다. -->
+            <tr>
+                <th>이름</th>
+                <th>취미</th>
+                <th>특기</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>독술</td>
+                <td>축지법</td>
+            </tr>
+            <tr>
+                <td>장동열</td>
+                <td>코딩</td>
+                <td>탁구</td>
+            </tr>
+        </table>
+        <hr />
+        <h1>Table 그룹 태그</h1>
+        <table>
+            <caption>
+                학급 점수
+            </caption>
+            <!-- 콜그룹 ㅣ열을 그룹으로 묶는 태그, col은 클래스로 하나 지정해서 style-->
+            <colgroup>
+                <col class="col1" />
+                <col class="col2" />
+                <col class="col3" />
+                <col class="col4" />
+                <col class="col5" />
+                <col class="col6" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>반</th>
+                    <th>이름</th>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th>수학</th>
+                    <th>코딩</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- rowspan ㅡ행을 "숫자"개만큼 하나로(위에서?) -->
+                    <td rowspan="2">1반</td>
+                    <td>홍길동</td>
+                    <td>100</td>
+                    <td>90</td>
+                    <td>100</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>장동열</td>
+                    <td>70</td>
+                    <td>92</td>
+                    <td>69</td>
+                    <td>64</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <!-- colspan ㅣ행을 "숫자"개 만큼 하나로(위에서?) -->
+                    <td colspan="2">평균</td>
+                    <td>100</td>
+                    <td>87.5</td>
+                    <td>99.5</td>
+                    <td>80.5</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
